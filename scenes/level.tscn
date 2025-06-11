@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://c65ytfj5mqf15"]
+[gd_scene load_steps=7 format=3 uid="uid://c65ytfj5mqf15"]
 
 [ext_resource type="PackedScene" uid="uid://benk1b0bbqtkm" path="res://scenes/paddle.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://cgjf3wcs7gvai" path="res://scripts/Level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bpmsn3x0k1kbn" path="res://scenes/ball.tscn" id="2_w7c3h"]
-[ext_resource type="PackedScene" uid="uid://cul4i0gbop86j" path="res://scenes/Brick.tscn" id="3_w8frs"]
+[ext_resource type="Texture2D" uid="uid://d0ebofa6fffu4" path="res://assets/background.png" id="4_mx8sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7c3h"]
 size = Vector2(20, 659)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(1126, 25)
+
 [node name="Level" type="Node2D"]
+script = ExtResource("1_w8frs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 324)
@@ -34,5 +39,16 @@ rotation = 1.5708
 scale = Vector2(1.10289, 1.76462)
 shape = SubResource("RectangleShape2D_w7c3h")
 
-[node name="Brick" parent="." instance=ExtResource("3_w8frs")]
-position = Vector2(448, 455)
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.176471)
+z_index = -1
+position = Vector2(600, 335)
+texture = ExtResource("4_mx8sn")
+
+[node name="Deathzone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(577, 656.5)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[connection signal="body_entered" from="Deathzone" to="Ball" method="_on_deathzone_body_entered"]

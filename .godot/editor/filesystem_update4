@@ -1,0 +1,7 @@
+res://scenes/level.tscn
+res://scripts/Level.gd
+res://scenes/paddle.tscn
+res://scenes/ball.tscn
+res://scenes/Brick.tscn
+res://scenes/paddle.gd
+res://scripts/Ball.gd

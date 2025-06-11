@@ -27,3 +27,9 @@ func _physics_process(delta: float) -> void:
 			
 		if velocity.x == 0:
 			velocity.x - 200
+
+func gameOver() -> void:
+	get_tree().reload_current_scene()
+
+func _on_deathzone_body_entered(body: Node2D) -> void:
+	gameOver()
