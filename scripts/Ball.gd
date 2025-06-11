@@ -5,11 +5,13 @@ var dir = Vector2.DOWN
 var is_active = true
 
 var level = 3
+@export var lives: int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	speed = speed + (20 * level)
 	velocity = Vector2(speed * -1, speed)
+	SignalHub.emit_reduce_lives(lives)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,4 +34,17 @@ func gameOver() -> void:
 	get_tree().reload_current_scene()
 
 func _on_deathzone_body_entered(body: Node2D) -> void:
+	reduce_lives(1)
 	gameOver()
+
+func reduce_lives(reduction: int) -> bool:
+	lives -= reduction
+	SignalHub.emit_reduce_lives(1)
+	if lives >= 0:
+		set_physics_process(false)
+		return false
+		
+	return true
+
+func level_over() -> void:
+	get_tree().paused = true

@@ -1,3 +1,10 @@
+Label
+VBoxContainer
+ColorRect
+CanvasLayer
+TextureRect
+HBoxContainer
+MarginContainer
 CollisionShape2D
 Area2D
 Sprite2D
@@ -5,4 +12,3 @@ RigidBody2D
 StaticBody2D
 CharacterBody2D
 Camera2D
-Node2D

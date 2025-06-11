@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr8cfnfeyohqt"]
+
+[ext_resource type="Script" uid="uid://cicsiijo03kea" path="res://scripts/hud.gd" id="1_rwkyw"]
+[ext_resource type="Texture2D" uid="uid://cel83rcoy5ido" path="res://assets/pixel heart 2.png" id="2_rwkyw"]
+[ext_resource type="LabelSettings" uid="uid://cf3hd07tv5o6" path="res://ScoreDisplay_48.tres" id="2_yc8k2"]
+[ext_resource type="LabelSettings" uid="uid://bfxy438dog1ww" path="res://GameOver_96.tres" id="4_b0yg8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rwkyw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "00000"
+label_settings = ExtResource("2_yc8k2")
+
+[node name="HbHearts" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="H1" type="TextureRect" parent="MarginContainer/HbHearts"]
+layout_mode = 2
+texture = ExtResource("2_rwkyw")
+
+[node name="H2" type="TextureRect" parent="MarginContainer/HbHearts"]
+layout_mode = 2
+texture = ExtResource("2_rwkyw")
+
+[node name="H3" type="TextureRect" parent="MarginContainer/HbHearts"]
+layout_mode = 2
+texture = ExtResource("2_rwkyw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.00392157, 0.0980392, 0.866667)
+
+[node name="VBGameOver" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBGameOver"]
+layout_mode = 2
+text = "Game Over"
+label_settings = ExtResource("4_b0yg8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/VBGameOver"]
+layout_mode = 2
+text = "Press Space"
+label_settings = ExtResource("2_yc8k2")
+horizontal_alignment = 1
+vertical_alignment = 1

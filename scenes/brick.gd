@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 func hit() -> void:
 	sprite_2d.visible = false
+	SignalHub.emit_hit_brick(1)
 
 	await get_tree().create_timer(1).timeout
 	queue_free()

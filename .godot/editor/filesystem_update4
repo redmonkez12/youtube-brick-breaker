@@ -5,3 +5,8 @@ res://scenes/ball.tscn
 res://scenes/Brick.tscn
 res://scenes/paddle.gd
 res://scripts/Ball.gd
+res://scripts/SignalHub.gd
+res://scenes/Hud.tscn
+res://scenes/brick.gd
+res://scripts/hud.gd
+res://ScoreDisplay_48.tres

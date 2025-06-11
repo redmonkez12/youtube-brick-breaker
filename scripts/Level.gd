@@ -4,7 +4,8 @@ extends Node2D
 
 var columns = 32
 var rows = 7
-var margin = 50
+var marginLeft = 50
+var marginTop = 70
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,7 +20,7 @@ func setupLevel() -> void:
 			if randomNumber > 0:
 				var newBrick = brickObject.instantiate()
 				add_child(newBrick)
-				newBrick.position = Vector2(margin + (34 * c), margin + (34 * r))
+				newBrick.position = Vector2(marginLeft + (34 * c), marginTop + (34 * r))
 				
 				var sprite = newBrick.get_node("Sprite2D")
 				if r <= 7:
