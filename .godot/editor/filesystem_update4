@@ -1,12 +1,8 @@
 res://scenes/level.tscn
-res://scripts/Level.gd
+res://ScoreDisplay_48.tres
+res://GameOver_96.tres
 res://scenes/paddle.tscn
 res://scenes/ball.tscn
 res://scenes/Brick.tscn
-res://scenes/paddle.gd
-res://scripts/Ball.gd
-res://scripts/SignalHub.gd
 res://scenes/Hud.tscn
 res://scenes/brick.gd
-res://scripts/hud.gd
-res://ScoreDisplay_48.tres

@@ -6,13 +6,15 @@ var is_active = true
 
 var level = 3
 @export var lives: int = 3
+var start_position: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	start_position = position  # Remember starting position
 	speed = speed + (20 * level)
 	velocity = Vector2(speed * -1, speed)
 	SignalHub.emit_reduce_lives(lives)
-
+	SignalHub.on_reset_ball_and_paddle.connect(reset_ball)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -28,23 +30,37 @@ func _physics_process(delta: float) -> void:
 			velocity.y = -200
 			
 		if velocity.x == 0:
-			velocity.x - 200
+			velocity.x = -200
 
 func gameOver() -> void:
-	get_tree().reload_current_scene()
+	SignalHub.emit_game_over()
 
 func _on_deathzone_body_entered(body: Node2D) -> void:
-	reduce_lives(1)
-	gameOver()
+	if body == self:
+		is_active = false
+
+		lives -= 1
+		SignalHub.emit_reduce_lives(lives)
+		
+		if lives <= 0:
+			gameOver()
+		else:
+			SignalHub.emit_reset_ball_and_paddle()
+			await get_tree().create_timer(0.5).timeout
+			is_active = true
+
+func reset_ball() -> void:
+	position = start_position
+	velocity = Vector2(speed * -1, speed)
 
 func reduce_lives(reduction: int) -> bool:
 	lives -= reduction
-	SignalHub.emit_reduce_lives(1)
-	if lives >= 0:
+	SignalHub.emit_reduce_lives(lives)
+	if lives <= 0:
 		set_physics_process(false)
-		return false
+		return true
 		
-	return true
+	return false
 
 func level_over() -> void:
 	get_tree().paused = true

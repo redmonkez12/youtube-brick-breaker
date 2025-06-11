@@ -1,24 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749627232
+::res://::1749630339
+GameOver_96.tres::LabelSettings/LabelSettings::2786356107863906330::1749630213::0::1::::<><><>0<>0<><>::uid://ngx3fqj0iqag::::res://fonts/LuckiestGuy-Regular.ttf
 icon.svg::CompressedTexture2D/CompressedTexture2D::7398596794494134131::1748871940::1748871945::1::::<><><>0<>0<>4138872ade106740a3bab9eb42e45b1b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-hud.gd::GDScript::5339588498980273696::1749627887::0::1::::<>Control<><>0<>0<><>::
+ScoreDisplay_48.tres::LabelSettings/LabelSettings::152412350071504267::1749630213::0::1::::<><><>0<>0<><>::uid://ngx3fqj0iqag::::res://fonts/LuckiestGuy-Regular.ttf
 ::res://assets/::1749627389
-background.png::CompressedTexture2D::8922326635185920433::1749626886::1749626936::1::::<><><>0<>0<>27f3558517c03a16863299b51ca026f4<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
+background.png::CompressedTexture2D/CompressedTexture2D::8922326635185920433::1749626886::1749626936::1::::<><><>0<>0<>27f3558517c03a16863299b51ca026f4<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
 ball.png::CompressedTexture2D/CompressedTexture2D::7034187411933404260::1748872031::1748872029::1::::<><><>0<>0<>7f79959ca02877c91b1581aaa8b94e52<>res://.godot/imported/ball.png-ca93c4f2e7b7f8325cbd933673092ff4.ctex::
 brick.png::CompressedTexture2D/CompressedTexture2D::4047860480111017792::1748872031::1748872029::1::::<><><>0<>0<>3adf595699ed3e06c9aee459c570b658<>res://.godot/imported/brick.png-2752dffcc7852625bd2ce25e2bde0c3a.ctex::
 paddle.png::CompressedTexture2D/CompressedTexture2D::8888076083249658338::1748872031::1748872029::1::::<><><>0<>0<>be5faa0b7dca9f7c140e8574bf0eb577<>res://.godot/imported/paddle.png-3a0aaebe6a43044daf93673e46fcb481.ctex::
-pixel heart 2.png::CompressedTexture2D::5078359456879537348::1749627389::1749627389::1::::<><><>0<>0<>02b4879222939e7bf7aa7848e706ea98<>res://.godot/imported/pixel heart 2.png-fdf72aae51209e556261d207281951c8.ctex::
+pixel heart 2.png::CompressedTexture2D/CompressedTexture2D::5078359456879537348::1749627389::1749627389::1::::<><><>0<>0<>02b4879222939e7bf7aa7848e706ea98<>res://.godot/imported/pixel heart 2.png-fdf72aae51209e556261d207281951c8.ctex::
 ::res://fonts/::1749627239
-LuckiestGuy-Regular.ttf::FontFile::926288014658026934::1749627238::1749627239::1::::<><><>0<>0<>38f6c3d2b85f097a534746ccd1f86afa<>res://.godot/imported/LuckiestGuy-Regular.ttf-b789a1aa0a67388e0f080e3a0b767747.fontdata::
-::res://scenes/::1749627738
-ball.tscn::PackedScene::3465143499837452199::1749627730::0::1::::<><><>0<>0<><>::uid://cwxhaa8h8ol1h::::res://scripts/Ball.gd<>uid://c7hoblbs4v88g::::res://assets/ball.png
-brick.gd::GDScript::5764106863910611550::1749627738::0::1::::<>RigidBody2D<><>0<>0<><>::
-Brick.tscn::PackedScene::6201102797000326947::1749627738::0::1::::<><><>0<>0<><>::uid://coef86tspab0y::::res://scenes/brick.gd<>uid://bxw2w2lqyxibg::::res://assets/brick.png
-level.tscn::PackedScene::7012118268597312230::1749627695::0::1::::<><><>0<>0<><>::uid://benk1b0bbqtkm::::res://scenes/paddle.tscn<>uid://cgjf3wcs7gvai::::res://scripts/Level.gd<>uid://bpmsn3x0k1kbn::::res://scenes/ball.tscn<>uid://d0ebofa6fffu4::::res://assets/background.png<>uid://dr8cfnfeyohqt::::res://scenes/Hud.tscn
-paddle.gd::GDScript::4563502815517399574::1749626886::0::1::::<>CharacterBody2D<><>0<>0<><>::
-paddle.tscn::PackedScene::2694666660808083100::1749627681::0::1::::<><><>0<>0<><>::uid://dyvpkxufxsm15::::res://assets/paddle.png<>uid://b6auhvxcpv5pi::::res://scenes/paddle.gd
-Hud.tscn::PackedScene::8420727912506830335::1749627681::0::1::::<><><>0<>0<><>::uid://ngx3fqj0iqag::::res://fonts/LuckiestGuy-Regular.ttf<>uid://cel83rcoy5ido::::res://assets/pixel heart 2.png
-::res://scripts/::1749627680
-Ball.gd::GDScript::6364901686056911303::1749626886::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Level.gd::GDScript::5212908575658276300::1749627680::0::1::::<>Node2D<><>0<>0<><>::
-SignalHub.gd::GDScript::2216219880403932932::1749627073::0::1::::<>Node<><>0<>0<><>::
+LuckiestGuy-Regular.ttf::FontFile/FontFile::926288014658026934::1749627238::1749627239::1::::<><><>0<>0<>38f6c3d2b85f097a534746ccd1f86afa<>res://.godot/imported/LuckiestGuy-Regular.ttf-b789a1aa0a67388e0f080e3a0b767747.fontdata::
+::res://scenes/::1749630213
+ball.tscn::PackedScene/PackedScene::3465143499837452199::1749630137::0::1::::<><><>0<>0<><>::uid://cwxhaa8h8ol1h::::res://scripts/Ball.gd<>uid://c7hoblbs4v88g::::res://assets/ball.png
+brick.gd::GDScript/GDScript::5764106863910611550::1749627738::0::1::::<>RigidBody2D<><>0<>0<><>::
+Brick.tscn::PackedScene/PackedScene::6201102797000326947::1749630137::0::1::::<><><>0<>0<><>::uid://coef86tspab0y::::res://scenes/brick.gd<>uid://bxw2w2lqyxibg::::res://assets/brick.png
+Hud.tscn::PackedScene/PackedScene::8420727912506830335::1749630137::0::1::::<><><>0<>0<><>::uid://cicsiijo03kea::::res://scripts/hud.gd<>uid://cel83rcoy5ido::::res://assets/pixel heart 2.png<>uid://cf3hd07tv5o6::::res://ScoreDisplay_48.tres<>uid://bfxy438dog1ww::::res://GameOver_96.tres
+level.tscn::PackedScene/PackedScene::7012118268597312230::1749630213::0::1::::<><><>0<>0<><>::uid://benk1b0bbqtkm::::res://scenes/paddle.tscn<>uid://cgjf3wcs7gvai::::res://scripts/Level.gd<>uid://bpmsn3x0k1kbn::::res://scenes/ball.tscn<>uid://d0ebofa6fffu4::::res://assets/background.png<>uid://dr8cfnfeyohqt::::res://scenes/Hud.tscn
+paddle.gd::GDScript/GDScript::4563502815517399574::1749629944::0::1::::<>CharacterBody2D<><>0<>0<><>::
+paddle.tscn::PackedScene/PackedScene::2694666660808083100::1749630137::0::1::::<><><>0<>0<><>::uid://dyvpkxufxsm15::::res://assets/paddle.png<>uid://b6auhvxcpv5pi::::res://scenes/paddle.gd
+::res://scripts/::1749629927
+Ball.gd::GDScript/GDScript::6364901686056911303::1749629927::0::1::::<>CharacterBody2D<><>0<>0<><>::
+hud.gd::GDScript/GDScript::5339588498980273696::1749629813::0::1::::<>Control<><>0<>0<><>::
+Level.gd::GDScript/GDScript::5212908575658276300::1749627680::0::1::::<>Node2D<><>0<>0<><>::
+SignalHub.gd::GDScript/GDScript::2216219880403932932::1749629927::0::1::::<>Node<><>0<>0<><>::
+::res://sounds/::1749630339
+ball_sound.wav::AudioStreamWAV/AudioStreamWAV::1453195090386603899::1749630106::1749630117::1::::<><><>0<>0<>9ecc70371ecd4d2bfcbf8283e09689be<>res://.godot/imported/ball_sound.wav-9dfc0720d82a0e77110ac682a5581969.sample::
+brick_sound.wav::AudioStreamWAV/AudioStreamWAV::3396560683715897477::1749630106::1749630120::1::::<><><>0<>0<>3ad53dfdbd9553b33da02486b98926fa<>res://.godot/imported/brick_sound.wav-594292e6b525c3cd231cdc740bd04178.sample::
+game_music.mp3::AudioStreamMP3::6269502966284364561::1749630335::1749630339::1::::<><><>0<>0<>3710175e4e3786017d7a9680bffff02f<>res://.godot/imported/game_music.mp3-2f6023325076d4f259b30b4539dfeb5e.mp3str::
