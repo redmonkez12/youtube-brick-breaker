@@ -6,3 +6,4 @@ res://scenes/ball.tscn
 res://scenes/Brick.tscn
 res://scenes/Hud.tscn
 res://scenes/brick.gd
+res://scripts/Ball.gd

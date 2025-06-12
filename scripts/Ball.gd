@@ -8,6 +8,9 @@ var level = 3
 @export var lives: int = 3
 var start_position: Vector2
 
+# Audio references
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start_position = position  # Remember starting position
@@ -23,14 +26,22 @@ func _physics_process(delta: float) -> void:
 		
 		if collision:
 			velocity = velocity.bounce(collision.get_normal())
-			if collision.get_collider().has_method("hit"):
-				collision.get_collider().hit()
+			var collider = collision.get_collider()
+			
+			if collider.has_method("hit"):
+				collider.hit()
+			else:
+				play_bounce_sound()
 				
 		if velocity.y > 0 and velocity.y < 100:
 			velocity.y = -200
 			
 		if velocity.x == 0:
 			velocity.x = -200
+
+func play_bounce_sound() -> void:
+	if audio_player and audio_player.stream:
+		audio_player.play()
 
 func gameOver() -> void:
 	SignalHub.emit_game_over()
